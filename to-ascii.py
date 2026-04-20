@@ -6,7 +6,7 @@ output_file = "restored_numbers.txt"
 #read
 with open(input_file, 'rb') as f:
     binary_data = f.read()
-num_integers = len(binary_data) // 4
+num_integers = len(binary_data) // 4 # 4 byte ints
 numbers = struct.unpack(f'{num_integers}i', binary_data)
 
 # write
